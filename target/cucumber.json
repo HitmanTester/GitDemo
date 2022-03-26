@@ -1,0 +1,102 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-03-26T01:57:58.742Z",
+        "line": 6,
+        "name": "Get token",
+        "description": "",
+        "id": "toekn-api;get-token",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 361793600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User creates request data with \"beydjavid1@gmail.com\" and \"@@Javid21\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"beydjavid1@gmail.com\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"@@Javid21\"",
+                  "offset": 58
+                }
+              ],
+              "location": "stepDefinitions.TokenApi.user_creates_request_data_with_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4175608600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User submits request to token API",
+            "match": {
+              "location": "stepDefinitions.TokenApi.user_submits_request_to_token_api()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7996900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User validates if status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinitions.TokenApi.user_validates_if_status_code_is(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 134922400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User retrieves access token from response",
+            "match": {
+              "location": "stepDefinitions.TokenApi.user_retrieves_access_token_from_response()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run"
+          }
+        ]
+      }
+    ],
+    "name": "Toekn Api",
+    "description": "//@tokenApi //@regression //@smoke",
+    "id": "toekn-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/tokenApi.feature",
+    "tags": [
+      {
+        "name": "@run",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
